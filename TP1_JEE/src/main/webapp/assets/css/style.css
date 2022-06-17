@@ -1,0 +1,28 @@
+@import url(./header.css);
+@import url(./footer.css);
+@import url(./main_left.css);
+@import url(./main_right.css);
+*{
+    font-size: 16px;
+     /* border: 1px blueviolet solid; */
+     margin: 0;
+     width: 100%;
+     box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    background-color: black;
+}
+
+main{
+    display: flex;
+    min-height: 18rem;
+    background: linear-gradient( rgba(250, 250, 249, 0.3), rgba(250, 250, 250, 0.3)), url(../img/background/appli-restau-background.jpg) no-repeat center fixed ;  
+    background-size: cover;
+    
+}
+
+
