@@ -7,8 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- load the properties file: sport.properties -->
-	<context:property-placeholder location="classpath:sport.properties"/>
+	
 <!-- 
 	Add a logger config to see logging messages.		
 	- For more detailed logs, set values to "FINEST"
@@ -29,24 +28,17 @@
     </bean>
     
     <bean id="myCoach" 
-    	class="com.luv2code.springdemo.TrackCoach">
+    	class="com.luv2code.springdemo.TrackCoach"
+    	init-method="doMyStartupStuff"
+    	destroy-method="doMyCleanupStuffYoYo"
+    	"singleton">
+    	
+    
     	
     	<!-- set up constructor injection -->
     	 <constructor-arg ref="myFortuneService"/>
     </bean>
     
-    <bean id="myCricketCoach"
-    	class="com.luv2code.springdemo.CricketCoach">
-    	
-    	<!-- set up setter injection -->
-    	<property name="fortuneService" ref="myFortuneService"/>
-    	
-    	 <!-- inject literal values -->
-    	 
-    	 <!-- the name will call the setter method (emailAdress for setemailAdress)-->
-    	 <property name="emailAdress" value="${foo.email}" />
-    	 <property name="team" value="${foo.team}" />
-    </bean>
 </beans>
 
 
