@@ -10,4 +10,9 @@ public class BaseballCoach implements Coach {
 		return "hit the ball 150times in a row";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		return null;
+	}
+
 }
