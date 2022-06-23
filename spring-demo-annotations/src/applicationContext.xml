@@ -7,6 +7,10 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 	
+	
+	
+	
+	
 <!-- 
 	Add a logger config to see logging messages.		
 	- For more detailed logs, set values to "FINEST"
